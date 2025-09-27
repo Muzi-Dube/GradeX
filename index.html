@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Sakhumuzi Dube">
+        <title>Gradex-Home</title>
+        <link rel="stylesheet" href="./styles/styles.css">
+        <script type="module" src="./scripts/main.js" defer></script>
+    </head>
+
+    <body>
+
+        <header class="header-container">
+            <div>
+                <h1 class="logo">Grade<span class="logo-letter-x">X</span></h1>
+            </div>
+
+            <div class="nav-links-container">
+                <button class="menu-icon"></button>
+                <div class="nav-links-display js-navbar menu-unactive">
+                    <div class="menu-tab">
+                        <a href="#" class="nav-links">Home</a>
+                        <a href="#" class="nav-links">Overview</a>
+                        <a href="#" class="nav-links">About</a>
+                        <a href="#" class="nav-links">Help</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-container">
+            <section class="hero-section">
+                <h1 class="hero-header">Grade calculator</h1>
+                <p class="intro-paragraph">Calculate your Grade average, GPA, APS score etc with our grade calculator for free!</p>
+            </section>
+
+            <section class="main-section">
+                <div class="input-container">
+                    <p class="paragraph-for-input-section"></p>
+                    <label>Subject: <input class="subject-input" type="text"></label>
+                    <label>Grade: <input class="grade-input" type="number"></label>
+                    <button class="add-btn">Add </button>
+                </div>
+                
+                <div class="list-container">
+                    <p>Mathematics</p>
+                    <p>Grade: 50%</p>
+                    <div class="list-btn-container">
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+
+                <div class="calculate-btn-container">
+                    <button class="calculate-btn">Calculate</button>
+                </div>  
+            </section>
+
+            <section class="stats-section">
+                <h1 class="stats-header">Statistics</h1>
+                <p class="stats-intro"> You can view your grade averages, GPA, APS score, and more. The statistics section gives you a clear overview of your academic performance, helping you track progress and set goals with confidence.</p>
+                <div class="stats-container">
+
+                    Grade average(%) = 0%
+                    <div class="stats-bar-container">
+                        <div class="stats-bar"></div>
+                    </div>
+                    
+                    GPA(4.0) = 0.0
+                    <div class="stats-bar-container">
+                        <div class="stats-bar"></div>
+                    </div>
+
+                    APS score = 0
+                    <div class="stats-bar-container">
+                        <div class="stats-bar"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+        </footer>
+        
+    </body>
+
+</html>
