@@ -7,6 +7,7 @@
         <meta name="author" content="Sakhumuzi Dube">
         <title>Gradex-Home</title>
         <link rel="stylesheet" href="./styles/styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script type="module" src="./scripts/main.js" defer></script>
     </head>
 
@@ -46,19 +47,44 @@
 
             <section class="main-section">
                 <div class="input-container">
-                    <p class="paragraph-for-input-section"></p>
-                    <label>Subject: <input class="subject-input js-subjectInput" type="text"></label>
-                    <label>Grade: <input class="grade-input js-gradeInput" type="number"></label>
-                    <button class="add-btn js-addBtn">Add </button>
+                    <div class="input-subject-grade-container">
+                        <p class="paragraph-for-input-section"></p>
+                        <label><b>Subject: </b><input class="subject-input js-subjectInput" type="text"></label>
+                        <label><b>Grade: </b><input class="grade-input js-gradeInput" type="number"></label>
+                    </div>
+                </div>
+                <div class="add-btn-container">
+                    <button class="add-btn js-addBtn"><b>Add</b></button>
+                    <button class="clear-btn js-clearBtn"><b>Clear all</b></button>
                 </div>
                 
-                <div class="list-container">
-                    <p>Nothing yet!</p>
+                <div class="subject-list-container">
+                     <div class="list-container list-container-empty js-listContainerEmpty">
+                    <p>
+                        <img class="plus-icon" src="./icons/add_icon.svg" alt="list icon">
+                        <b>No subjects yet</b>
+                    </p>
+                </div>
                 </div>
 
-                <div class="calculate-btn-container">
-                    <button class="calculate-btn">Calculate</button>
-                </div>  
+                <div class="results-container">
+                    <div class="grade-type">
+                        <span  class="grade"><b>No.subjects</b></span>
+                        <span class="score">0</span>
+                    </div>
+                    <div class="grade-type">
+                        <span  class="grade"><b>Average(%)</b></span>
+                        <span class="score">0%</span>
+                    </div>
+                    <div class="grade-type">
+                        <span class="grade"><b>GPA(4.0)</b></span>
+                        <span class="score">0.0</span>
+                    </div>
+                    <div class="grade-type">
+                        <span class="grade"><b>APS score</b></span>
+                        <span class="score">0</span>
+                    </div>
+                </div>
             </section>
 
             <section class="stats-section">
@@ -66,27 +92,74 @@
                 <p class="stats-intro"> You can view your grade averages, GPA, APS score, and more. The statistics section gives you a clear overview of your academic performance, helping you track progress and set goals with confidence.</p>
                 <div class="stats-container">
 
-                    Grade average(%) = 0%
+                    <span><b>Grade average(%) =</b> 0%</span>
                     <div class="stats-bar-container">
                         <div class="stats-bar"></div>
                     </div>
                     
-                    GPA(4.0) = 0.0
+                    <span><b>GPA(4.0) =</b> 0.0</span>
                     <div class="stats-bar-container">
                         <div class="stats-bar"></div>
                     </div>
 
-                    APS score = 0
-                    <div class="stats-bar-container">
-                        <div class="stats-bar"></div>
+                </div>
+
+                <h4 class="graph-header">Graph Of Avg.Grade & Avg.GPA (Global)</h4>
+                <div class="performance-graph">
+                    <canvas id="performanceGraph" width="400" height="200"></canvas>
+                </div>
+
+                <div class="download-container">
+
+                    <div class="btn-header-container">
+                        <p>Summary PDF</p>
+                        <a href="#" class="download-btn">Download</a>
                     </div>
+
+                    <div class="btn-header-container">
+                        <p>Download Certificate</p>
+                        <a href="#" class="cert-download-btn">Download</a>
+                    </div>
+
                 </div>
             </section>
         </main>
 
-        <footer>
+    
+        <footer class="site-footer" role="contentinfo">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <h2 class="logo">Grade<span class="logo-letter-x">X</span></h2>
+                    <p class="footer-tag">Simple, reliable tools to track your progress.</p>
+                </div>
+
+                <nav class="footer-nav" aria-label="Footer navigation">
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="#" class="footer-link">Overview</a>
+                    <a href="#" class="footer-link">About</a>
+                    <a href="#" class="footer-link">Help</a>
+                </nav>
+
+                <div class="footer-contact" aria-label="Contact information">
+                    <p class="footer-contact-title"><strong>Contact</strong></p>
+                    <p><a class="footer-link" href="mailto:sakhumuzi511@gmail.com">sakhumuzi511@gmail.com</a></p>
+                </div>
+
+                <div class="footer-social" aria-label="Social links">
+                    <p class="footer-contact-title"><strong>Follow</strong></p>
+                    <div class="social-links">
+                        <a class="social-btn" id="twitter" href="#" aria-label="Twitter"></a>
+                        <a class="social-btn" id="gitHub" href="#" aria-label="GitHub"></a>
+                        <a class="social-btn" id="linked-in" href="#" aria-label="LinkedIn"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <small>© 2025 GradeX — All rights reserved.</small>
+                <small>Made with Muzi</small>
+            </div>
         </footer>
-        
     </body>
 
 </html>
