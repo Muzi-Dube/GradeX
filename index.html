@@ -8,6 +8,9 @@
         <title>Gradex-Home</title>
         <link rel="stylesheet" href="./styles/styles.css">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- simple print/export handler -->
+        <script type="module" src="./scripts/pdf-gen.js" defer></script>
         <script type="module" src="./scripts/main.js" defer></script>
     </head>
 
@@ -25,8 +28,8 @@
                         <a href="#" class="nav-links">
                             Home
                         </a>
-                        <a href="#" class="nav-links">
-                            Overview
+                        <a href="#stats" class="nav-links">
+                            Stats
                         </a>
                         <a href="#" class="nav-links">
                             About
@@ -42,15 +45,17 @@
         <main class="main-container">
             <section class="hero-section">
                 <h1 class="hero-header">Grade calculator</h1>
-                <p class="intro-paragraph">Calculate your Grade average, GPA, APS score etc with our grade calculator for free!</p>
+                <p class="intro-paragraph">Calculate your Grades with real-time statistical feedback with our grade calculator</p>
             </section>
 
             <section class="main-section">
                 <div class="input-container">
                     <div class="input-subject-grade-container">
-                        <p class="paragraph-for-input-section"></p>
-                        <label><b>Subject: </b><input class="subject-input js-subjectInput" type="text"></label>
-                        <label><b>Grade: </b><input class="grade-input js-gradeInput" type="number"></label>
+
+                        <label><b>Subject: </b><input class="subject-input js-subjectInput" type="text" aria-required="true" required></label>
+
+                        <label><b>Grade: </b><input class="grade-input js-gradeInput" type="number" placeholder="max.100"></label>
+
                     </div>
                 </div>
                 <div class="add-btn-container">
@@ -87,9 +92,9 @@
                 </div>
             </section>
 
-            <section class="stats-section">
+            <section class="stats-section" id="stats">
                 <h1 class="stats-header">Statistics</h1>
-                <p class="stats-intro"> You can view your grade averages, GPA, APS score, and more. The statistics section gives you a clear overview of your academic performance, helping you track progress and set goals with confidence.</p>
+                <p class="stats-intro"> View your grade average and GPA in this section.The statistics section gives you a clear overview of your academic performance, helping you track progress and set goals with confidence.</p>
                 <div class="stats-container">
 
                     <span><b>Grade average(%) =</b> 0%</span>
@@ -105,22 +110,33 @@
                 </div>
 
                 <h4 class="graph-header">Graph Of Avg.Grade & Avg.GPA (Global)</h4>
+                <!-- performance graph -->
                 <div class="performance-graph">
                     <canvas id="performanceGraph" width="400" height="200"></canvas>
+                </div>
+
+                <!-- performance legend -->
+                <div class="performance-legend" role="list" aria-label="Performance legend">
+                    <div class="legend-item" role="listitem">
+                        <span class="legend-color legend-below" aria-hidden="true"></span>
+                        <span class="legend-label">Below average</span>
+                    </div>
+                    <div class="legend-item" role="listitem">
+                        <span class="legend-color legend-average" aria-hidden="true"></span>
+                        <span class="legend-label">Average</span>
+                    </div>
+                    <div class="legend-item" role="listitem">
+                        <span class="legend-color legend-above" aria-hidden="true"></span>
+                        <span class="legend-label">Above average</span>
+                    </div>
                 </div>
 
                 <div class="download-container">
 
                     <div class="btn-header-container">
-                        <p>Summary PDF</p>
+                        <p>Click "download" to Save page as PDF</p>
                         <a href="#" class="download-btn">Download</a>
                     </div>
-
-                    <div class="btn-header-container">
-                        <p>Download Certificate</p>
-                        <a href="#" class="cert-download-btn">Download</a>
-                    </div>
-
                 </div>
             </section>
         </main>
@@ -135,7 +151,7 @@
 
                 <nav class="footer-nav" aria-label="Footer navigation">
                     <a href="#" class="footer-link">Home</a>
-                    <a href="#" class="footer-link">Overview</a>
+                    <a href="#" class="footer-link">Stats</a>
                     <a href="#" class="footer-link">About</a>
                     <a href="#" class="footer-link">Help</a>
                 </nav>
@@ -157,7 +173,7 @@
 
             <div class="footer-bottom">
                 <small>© 2025 GradeX — All rights reserved.</small>
-                <small>Made with Muzi</small>
+                <small>Made By Muzi</small>
             </div>
         </footer>
     </body>
