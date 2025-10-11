@@ -24,6 +24,9 @@ html, body{
     scroll-behavior: smooth;
 }
 
+/*styles for the header section (consistent over all pages)*/
+
+/*header container styles*/
 .header-container{
     display: flex;
     justify-content: space-evenly;
@@ -37,17 +40,20 @@ html, body{
     background-color: rgb(255, 255, 255);
 }
 
+/*logo styles*/
 .logo{
    color: rgb(92, 91, 90);
    font-family: 'cal sans', Arial, sans-serif;
 }
 
+/*logo letter X styles*/
 .logo-letter-x{
     color: rgb(255, 183, 48);
 }
 
+/*hamburger menu icon*/
 .menu-icon-1{
-    background-image: url('../icons/menu_icon_1.svg');
+    background-image: url('../assets/menu_icon_1.svg');
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
@@ -60,6 +66,7 @@ html, body{
     animation: openMenu 0.8s ease-in-out;
 }
 
+/*animation for the hamburger menu icon(rotation)*/
 @keyframes openMenu{
     from {
         opacity: 0;
@@ -72,13 +79,15 @@ html, body{
     }
 }
 
+/*hover effects for hamburger menu icon*/
 .menu-icon-1:hover{
     cursor: pointer;
     transform: scale(1.03);
 }
 
+/*close menu icon*/
 .menu-icon-2{
-    background-image: url('../icons/menu_icon_2.svg');
+    background-image: url('../assets/menu_icon_2.svg');
     background-color: transparent;
     background-repeat: no-repeat;
     background-position: center center;
@@ -91,6 +100,7 @@ html, body{
     animation: closeMenu 0.8s ease-in-out;
 }
 
+/*animation effect for the close menu icon(rotation)*/
 @keyframes closeMenu{
     from {
         opacity: 0;
@@ -103,20 +113,24 @@ html, body{
     }
 }
 
+/*hover effects for close menu icon*/
 .menu-icon-2:hover{
     cursor: pointer;
     transform: scale(1.03);
 }
 
+/*hides menu when the hamburger icon hasn't been clicked*/
 .menu-unactive{
     display: none;
 }
 
+/*shows menu when the hamburger icon has been clicked*/
 .menu-active{
     display: flex;
     justify-content: center;
 }
 
+/*navigation menu styles*/
 .menu-tab{
     background-color: rgb(228, 228, 228);
     border-radius: 20px;
@@ -133,6 +147,7 @@ html, body{
     animation: slideFade 0.4s ease-in-out;
 }
 
+/*animation for menu when it renders*/
 @keyframes slideFade{
     from {
         opacity: 0;
@@ -611,21 +626,28 @@ input:focus{
 }
 
 #twitter{
-    background-image: url('../icons/twitter.png');
+    background-image: url('../assets/twitter.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
 }
 
 #gitHub{
-    background-image: url('../icons/github-142-svgrepo-com.svg');
+    background-image: url('../assets/github-142-svgrepo-com.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
 }
 
 #linked-in{
-    background-image: url('../icons/linkedin-svgrepo-com.svg');
+    background-image: url('../assets/linkedin-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+#instagram{
+    background-image: url('../assets/instagram-svgrepo-com.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 60%;
@@ -967,7 +989,7 @@ input:focus{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        margin: 0 0.2rem;
         padding: 0.3rem 1rem;
    }
 
