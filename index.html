@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Sakhumuzi Dube">
         <title>Gradex-Home</title>
-        <link rel="stylesheet" href="./styles/styles.css">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-        <!-- simple print/export handler -->
-        <script type="module" src="./scripts/pdf-gen.js" defer></script>
+        <!--stylesheet links-->
+        <link rel="stylesheet" href="./styles/styles.css">
+
+        <!--Scripts links-->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script type="module" src="./scripts/main.js" defer></script>
     </head>
 
@@ -24,20 +25,20 @@
             <div class="nav-links-container">
                 <button class="menu-icon-1 js-menu-btn"></button>
                 <div class="nav-links-display js-navbar menu-unactive">
-                    <div class="menu-tab">
-                        <a href="#" class="nav-links">
+                    <nav class="menu-tab">
+                        <a href="index.html" class="nav-links">
                             Home
                         </a>
-                        <a href="#stats" class="nav-links">
-                            Stats
-                        </a>
-                        <a href="#" class="nav-links">
+                        <a href="about.html" class="nav-links">
                             About
                         </a>
-                        <a href="#" class="nav-links">
+                        <a href="contacts.html" class="nav-links">
+                            contacts
+                        </a>
+                        <a href="help.html" class="nav-links">
                             Help
                         </a>
-                    </div>
+                    </nav>
                 </div>
             </div>
         </header>
@@ -63,31 +64,43 @@
                     <button class="clear-btn js-clearBtn"><b>Clear all</b></button>
                 </div>
                 
-                <div class="subject-list-container">
-                     <div class="list-container list-container-empty js-listContainerEmpty">
-                    <p>
-                        <img class="plus-icon" src="./icons/add_icon.svg" alt="list icon">
-                        <b>No subjects yet</b>
-                    </p>
-                </div>
-                </div>
+                <div class="subjects-and-results-container">
 
-                <div class="results-container">
-                    <div class="grade-type">
-                        <span  class="grade"><b>No.subjects</b></span>
-                        <span class="score">0</span>
+                    <div class="subject-list-container">
+
+                        <div class="list-container list-container-empty js-listContainerEmpty">
+
+                            <p>
+                                <img class="plus-icon" src="./icons/add_icon.svg" alt="list icon">
+                                <b>No subjects yet</b>
+                            </p>
+
+                        </div>
+
                     </div>
-                    <div class="grade-type">
-                        <span  class="grade"><b>Average(%)</b></span>
-                        <span class="score">0%</span>
-                    </div>
-                    <div class="grade-type">
-                        <span class="grade"><b>GPA(4.0)</b></span>
-                        <span class="score">0.0</span>
-                    </div>
-                    <div class="grade-type">
-                        <span class="grade"><b>APS score</b></span>
-                        <span class="score">0</span>
+
+                    <div class="results-container">
+                        
+                        <div class="grade-type">
+                            <span  class="grade"><b>No.subjects</b></span>
+                            <span class="score">0</span>
+                        </div>
+
+                        <div class="grade-type">
+                            <span  class="grade"><b>Average(%)</b></span>
+                            <span class="score">0%</span>
+                        </div>
+
+                        <div class="grade-type">
+                            <span class="grade"><b>GPA(4.0)</b></span>
+                            <span class="score">0.0</span>
+                        </div>
+
+                        <div class="grade-type">
+                            <span class="grade"><b>APS score</b></span>
+                            <span class="score">0</span>
+                        </div>
+
                     </div>
                 </div>
             </section>
