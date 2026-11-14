@@ -182,8 +182,8 @@ html, body{
 }
 
 .active-nav{
-    background: rgb(6, 52, 255);
     color: rgb(255, 255, 255);
+    background: rgb(6, 52, 255);
     transform: translateX(0px);
 }
 
@@ -306,13 +306,14 @@ input:focus{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-height: auto;
 }
 
 .list-container-empty{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(245, 245, 242);
+    background-color:rgb(255, 255, 249);
     color: #141312;
     border-radius: 0.5em;
     padding: 1em;
@@ -328,15 +329,19 @@ input:focus{
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    background: rgb(245, 245, 242);
+    background-color: rgb(255, 255, 249);
     color: #141312;
     border-radius: 0.5em;
     padding: 0 0.5em;
-    height: 50vh;
+    height: 15em;
     margin: 2em 0.5em 0 0.5em;
     overflow-Y: auto;
     overflow-x: hidden;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.39) transparent;
+    width: 24em;
+    text-wrap: wrap;
 }
 
 /* chrome, Edge, Safari */
@@ -360,12 +365,6 @@ input:focus{
 }
 
 /* firefox */
-
-.subject-list-container{
-    scrollbar-width: thin;
-    scrollbar-color: rgba(0, 0, 0, 0.39) transparent;
-    width: 95vw;
-}
 
 .subject-list{
     display: flex;
@@ -428,7 +427,7 @@ input:focus{
     border-radius: 0.5em; 
     margin: 2em 0.5em;
     width: 95vw;
-    height: 20vh;
+    height: 10em;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.39);
 }
 
@@ -1065,6 +1064,7 @@ input:focus{
 
     .subject-list-container{
         width: 30em;
+        max-height: 18.5em;
     }
 
     .subjects-and-results-container{
@@ -1078,15 +1078,13 @@ input:focus{
         flex-direction: column;
         align-items: center;
         width: 14em;
-        height: 15.8em;
-        overflow-x: hidden;
-        overflow-y: scroll;
+        height: 18.5em;
     }
 
     .grade-type{
         align-items: center;
         justify-content: center;
-        margin: 0.5em;
+        margin: 0.1em;
         font-size: 1.2em;
     }
 
